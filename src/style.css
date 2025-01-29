@@ -1,0 +1,44 @@
+:root {
+    --font: "Poppins", serif;
+    --primary-color: #09122C;
+    --secondary-color: #E26EE5;
+    --tertiary-color: #e5e7ebc1;
+    --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    background-color: var(--primary-color) !important;
+    color: var(--tertiary-color) !important;
+    font-family: var(--font);
+    margin: 60px auto;
+}
+
+.container-fluid {
+    max-width: 1200px;
+}
+
+/* Custom Navbar Styles */
+.custom-navbar {
+    background-color: var(--primary-color);
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.custom-navbar,
+.navbar-nav,
+.nav-link,
+.navbar-brand {
+    color: var(--tertiary-color) !important;
+}
+
+.custom-navbar .navbar-toggler {
+    border-color: var(--tertiary-color) !important;
+}
+
+.navbar-toggler i {
+    color: var(--secondary-color);
+}
+
+.wrapper {
+    max-width: 850px;
+}
