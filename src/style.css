@@ -1,27 +1,52 @@
 :root {
     --font: "Poppins", serif;
-    --primary-color: #09122C;
-    --secondary-color: #E26EE5;
-    --tertiary-color: #e5e7ebc1;
+    --primary-color: rgb(4, 10, 29);
+    --secondary-color: rgba(207, 148, 236, 0.93);
+    --tertiary-color: rgba(174, 177, 184, 0.667);
+    --custome-name: rgba(255, 255, 255, 0.8);
     --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.container-fluid .row {
+    display: flex;
+    align-items: center;
 }
 
 body {
     background-color: var(--primary-color) !important;
     color: var(--tertiary-color) !important;
     font-family: var(--font);
-    margin: 60px auto;
 }
 
-.container-fluid {
-    max-width: 1200px;
+h1.custome-name {
+    font-weight: bold;
+    font-size: 3.5rem !important;
+    margin-bottom: 0.3rem;
+    line-height: 1.5;
+    color: var(--custome-name)
+}
+
+@media (max-width:780px) {
+    h1.custome-name {
+        font-size: 2rem !important;
+        line-height: 1.4;
+        text-align: center;
+    }
+
+    h4 {
+        font-size: 1.2rem !important;
+    }
+}
+
+.job-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--secondary-color)
 }
 
 /* Custom Navbar Styles */
 .custom-navbar {
     background-color: var(--primary-color);
-    margin-left: 0;
-    margin-right: 0;
 }
 
 .custom-navbar,
@@ -39,6 +64,147 @@ body {
     color: var(--secondary-color);
 }
 
-.wrapper {
-    max-width: 850px;
+.custome-profile-container {
+    margin-bottom: 30px;
+    /* Space between image and text */
+    text-align: center;
+    /* Align image to center */
+}
+
+.custome-profile {
+    border-radius: 50%;
+    border: 5px solid var(--tertiary-color);
+    width: 175px;
+    height: 175px;
+    object-fit: cover;
+    /* Prevents distortion */
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.custome-profile:hover {
+    border-color: var(--secondary-color);
+    transform: scale(1.01);
+    transition: all 0.15ms ease-in-out;
+}
+
+/*Fixed left*/
+.profile-container {
+    position: fixed;
+    top: 85px;
+    z-index: 1000;
+    margin-top: 10px;
+}
+
+.menu-container {
+    position: fixed;
+    top: 280px;
+}
+
+/*Menu fixed position*/
+@media(max-width: 768px) {
+
+    .profile-container,
+    .menu-container {
+        position: relative;
+        /*no fixed positioning on smaller screen */
+        left: auto;
+        top: auto;
+        text-align: center;
+        /*Center content for better mobile experience*/
+    }
+
+    .custome-profile {
+        margin: 2px auto;
+        display: block;
+    }
+}
+
+/*smaller size on medium screen (max-width: 780px) */
+
+@media (max-width:780px) {
+    .custome-profile {
+        max-width: 120px;
+        height: 120px;
+        margin-bottom: 10px;
+    }
+}
+
+.custome-job-title {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.col-md-12.custome-job-title {
+    line-height: 2;
+}
+
+.custome-experience:hover {
+    border: 1px solid var(--primary-color);
+    background-color: rgba(24, 33, 63, 0.852);
+    border-radius: 5px;
+    cursor: pointer;
+    padding-left: 5px;
+    padding-right: 5px;
+    transform: scale(1.01);
+    /* Slight zoom effect */
+    transition: all 0.03 ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    /* Optional shadow effect */
+
+}
+
+/*about , experience , project , contact*/
+ul {
+    list-style-type: none;
+    margin-right: 48px;
+    margin-top: -13px;
+}
+
+/*description - section*/
+.description {
+    text-align: justify;
+    line-height: 1.8;
+}
+
+li a {
+    color: var(--tertiary-color);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+ul li a:hover {
+    cursor: pointer;
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    transition: all 0.25s ease-in-out;
+}
+
+.custom-line {
+    display: inline-block;
+    width: 18px;
+    height: 2px;
+    background-color: var(--tertiary-color);
+    margin-left: 10px;
+    transition: all 0.25s ease-in-out;
+    ;
+}
+
+.custom-line:hover {
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    transform: scaleX(1.1);
+    transition: all 0.25s ease-in-out;
+    width: 45px;
+}
+
+@media (max-width:768px) {
+    .d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .my-2 {
+        margin-bottom: 16px;
+    }
 }
