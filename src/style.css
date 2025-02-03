@@ -40,7 +40,6 @@ h1.custome-name {
     }
 }
 
-/* TO DO*/
 .name {
     padding-top: 75px;
 }
@@ -131,7 +130,7 @@ h1.custome-name {
 }
 
 /*smaller size on medium screen (max-width: 780px) */
-@media (max-width:780px) {
+@media (max-width:768px) {
     .custome-profile {
         max-width: 120px;
         height: 120px;
@@ -263,14 +262,13 @@ ul li a:hover .custom-line {
     background-color: var(--skill-color);
     padding: 4px 8px;
     color: var(--secondary-color);
-
 }
 
 .project-detail {
     margin-left: 12px;
 }
 
-@media (max-width:780px) {
+@media (max-width:768px) {
     .project-detail {
         margin-top: 20px;
     }
@@ -301,7 +299,6 @@ ul li a:hover .custom-line {
 }
 
 .footer-name {
-
     text-decoration: none;
     color: var(--tertiary-color)
 }
@@ -310,10 +307,4 @@ ul li a:hover .custom-line {
     cursor: pointer;
     color: var(--secondary-color);
     text-decoration: underline;
-}
-
-.footer-icon {
-
-    position: fixed;
-    bottom: 54px;
 }
