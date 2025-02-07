@@ -2,6 +2,7 @@
     --font: "Poppins", serif;
     --primary-color: rgb(4, 10, 29);
     --secondary-color: rgba(207, 148, 236, 0.93);
+    --border-color: rgb(149, 13, 218);
     --tertiary-color: rgba(174, 177, 184, 0.667);
     --custome-name: rgba(255, 255, 255, 0.8);
     --custome-projects: rgba(11, 18, 42, 0.852);
@@ -76,19 +77,31 @@ h1.custome-name {
 
 .custome-profile {
     border-radius: 50%;
-    border: 5px solid var(--tertiary-color);
+    border: 7px solid var(--tertiary-color);
     width: 175px;
     height: 175px;
     object-fit: cover;
     /* Prevents distortion */
     padding: 8px;
     transition: all 0.3s ease;
+
+    background:
+        linear-gradient(var(--primary-color), var(--primary-color)) padding-box,
+        linear-gradient(to right, var(--border-color) 50%, transparent 50%) border-box;
+
+    background-size: 200% 100%;
+    background-position: 100% 0;
+
+    transition: background-position 0.2s ease-in-out, transform 0.3s ease-in-out;
 }
 
+
 .custome-profile:hover {
-    border-color: var(--secondary-color);
-    transform: scale(1.01);
-    transition: all 0.15ms ease-in-out;
+    background:
+        linear-gradient(var(--primary-color), var(--primary-color)) padding-box,
+        linear-gradient(to right, transparent 50%, var(--border-color) 50%)border-box;
+
+    transform: scale(1.02);
 }
 
 /*Fixed left*/
