@@ -57,6 +57,12 @@ h1.custome-name {
     color: var(--secondary-color)
 }
 
+@media (max-width:844px) {
+    h4.job-title {
+        margin-bottom: -35px
+    }
+}
+
 /* Custom Navbar Styles */
 .custom-navbar {
     background-color: var(--primary-color);
@@ -134,7 +140,7 @@ h1.custome-name {
         top: auto;
         text-align: center;
         /*Center content for better mobile experience*/
-        margin-top: -44px;
+
     }
 
     .custome-profile {
