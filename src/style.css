@@ -89,12 +89,18 @@ h1.custome-name {
         linear-gradient(var(--primary-color), var(--primary-color)) padding-box,
         linear-gradient(to right, var(--border-color) 50%, transparent 50%) border-box;
 
-    background-size: 200% 100%;
+    background-size: 100% 50%;
     background-position: 100% 0;
 
-    transition: background-position 0.2s ease-in-out, transform 0.3s ease-in-out;
+    transition: background-position 2.8s ease-in-out 0.5s,
+        transform 0.5s ease-in-out 0.2s;
 }
 
+@media(max-width:844px) {
+    .custome-profile {
+        border: 5px solid var(--tertiary-color);
+    }
+}
 
 .custome-profile:hover {
     background:
@@ -123,11 +129,12 @@ h1.custome-name {
     .profile-container,
     .menu-container {
         position: relative;
-        /*no fixed positioning on smaller screen */
+        /* fixed positioning on smaller screen */
         left: auto;
         top: auto;
         text-align: center;
         /*Center content for better mobile experience*/
+        margin-top: -44px;
     }
 
     .custome-profile {
@@ -177,7 +184,17 @@ h1.custome-name {
 
 .fa-solid {
     margin-left: 7px;
-    font-size: 12px;
+    font-size: 13px;
+}
+
+.fa-solid.project-icon {
+    color: var(--custome-name);
+}
+
+@media (max-width:844px) {
+    .fa-solid.project-icon {
+        display: none;
+    }
 }
 
 .fa-solid:hover {
@@ -313,7 +330,7 @@ ul li a:hover .custom-line {
 
 .footer-name {
     text-decoration: none;
-    color: var(--tertiary-color)
+    color: var(--custome-name)
 }
 
 .footer-name:hover {
