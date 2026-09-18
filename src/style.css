@@ -140,7 +140,6 @@ h1.custome-name {
         top: auto;
         text-align: center;
         /*Center content for better mobile experience*/
-
     }
 
     .custome-profile {
@@ -276,8 +275,11 @@ ul li a:hover .custom-line {
     margin-bottom: 35px;
 }
 
-.highlight {
+
+.highlight,
+a {
     color: var(--custome-name);
+    text-decoration: none;
 }
 
 .company {
